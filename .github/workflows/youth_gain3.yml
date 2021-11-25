@@ -11,16 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-      YOUTH_START1: ${{ secrets.YOUTH_START1 }}
-      YOUTH_LOOK1: ${{ secrets.YOUTH_LOOK1 }}
-      YOUTH_START2: ${{ secrets.YOUTH_START2 }}
-      YOUTH_LOOK2: ${{ secrets.YOUTH_LOOK2 }}
-      YOUTH_START3: ${{ secrets.YOUTH_START3 }}
-      YOUTH_LOOK3: ${{ secrets.YOUTH_LOOK3 }}
-      YOUTH_START4: ${{ secrets.YOUTH_START4 }}
-      YOUTH_LOOK4: ${{ secrets.YOUTH_LOOK4 }}
-      YOUTH_START5: ${{ secrets.YOUTH_START5 }}
-      YOUTH_LOOK5: ${{ secrets.YOUTH_LOOK5 }}
+      YOUTH_START31: ${{ secrets.YOUTH_START31 }}
+      YOUTH_LOOK31: ${{ secrets.YOUTH_LOOK31 }}
+      YOUTH_START32: ${{ secrets.YOUTH_START32 }}
+      YOUTH_LOOK32: ${{ secrets.YOUTH_LOOK32 }}
+      YOUTH_START33: ${{ secrets.YOUTH_START33 }}
+      YOUTH_LOOK33: ${{ secrets.YOUTH_LOOK33 }}
+      YOUTH_START34: ${{ secrets.YOUTH_START34 }}
+      YOUTH_LOOK34: ${{ secrets.YOUTH_LOOK34 }}
+      YOUTH_START35: ${{ secrets.YOUTH_START35 }}
+      YOUTH_LOOK35: ${{ secrets.YOUTH_LOOK35 }}
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 12.x
@@ -32,39 +32,39 @@ jobs:
           npm install
           
       - name: '运行 【账号一中青浏览赚】'
-        if: env.YOUTH_START1
+        if: env.YOUTH_START31
         run: |
           node youth_gain.js
         env:
-          YOUTH_START: ${{ secrets.YOUTH_START1 }}
-          YOUTH_LOOK: ${{ secrets.YOUTH_LOOK1 }}
+          YOUTH_START: ${{ secrets.YOUTH_START31 }}
+          YOUTH_LOOK: ${{ secrets.YOUTH_LOOK31 }}
        
       - name: '运行 【账号二中青浏览赚】'
-        if: env.YOUTH_START2
+        if: env.YOUTH_START32
         run: |
           node youth_gain.js
         env:
-          YOUTH_START: ${{ secrets.YOUTH_START2 }}
-          YOUTH_LOOK: ${{ secrets.YOUTH_LOOK2 }}
+          YOUTH_START: ${{ secrets.YOUTH_START32 }}
+          YOUTH_LOOK: ${{ secrets.YOUTH_LOOK32 }}
       - name: '运行 【账号三中青浏览赚】'
-        if: env.YOUTH_START3
+        if: env.YOUTH_START33
         run: |
           node youth_gain.js
         env:
-          YOUTH_START: ${{ secrets.YOUTH_START3 }}
-          YOUTH_LOOK: ${{ secrets.YOUTH_LOOK3 }}
+          YOUTH_START: ${{ secrets.YOUTH_START33 }}
+          YOUTH_LOOK: ${{ secrets.YOUTH_LOOK33 }}
       - name: '运行 【账号四中青浏览赚】'
-        if: env.YOUTH_START4
+        if: env.YOUTH_START34
         run: |
           node youth_gain.js
         env:
-          YOUTH_START: ${{ secrets.YOUTH_START4 }}
-          YOUTH_LOOK: ${{ secrets.YOUTH_LOOK4 }}
+          YOUTH_START: ${{ secrets.YOUTH_START34 }}
+          YOUTH_LOOK: ${{ secrets.YOUTH_LOOK34 }}
       - name: '运行 【账号五中青浏览赚】'
-        if: env.YOUTH_START5
+        if: env.YOUTH_START35
         run: |
           node youth_gain.js
         env:
-          YOUTH_START: ${{ secrets.YOUTH_START5 }}
-          YOUTH_LOOK: ${{ secrets.YOUTH_LOOK5 }}
+          YOUTH_START: ${{ secrets.YOUTH_START35 }}
+          YOUTH_LOOK: ${{ secrets.YOUTH_LOOK35 }}
 
